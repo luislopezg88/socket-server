@@ -1,7 +1,7 @@
 import { Usuario } from "./usuario";
 
 
-export class UsuarioLista {
+export class UsuariosLista {
 
     private lista: Usuario[] = [];
 
@@ -23,11 +23,12 @@ export class UsuarioLista {
             }
         }
         console.log('#########actualizando usuario ##############');
-        console.log(this.lista);
+        
     }
 
     public getLista() {
-        return this.lista;
+        return this.lista.filter(usuario => usuario.nombre !== 'sin-nombre');
+        
 
     }
 
